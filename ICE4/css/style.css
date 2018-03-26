@@ -32,7 +32,7 @@ html, body, header, footer{
     padding: 0;
 }
 header, footer, .logo {
-	background-color: #211D24;
+	background-color: #00274C;
 	color: #DDDDDA; 
 }
 body{
@@ -80,6 +80,7 @@ header{
     box-shadow: 0px 18px 26px 1px rgba(141, 141, 139, .75);
     width: 100%;
     position: fixed;
+    background-color: #00274C;
 }
 /*mobile-first*/
 .top-nav ul{
