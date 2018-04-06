@@ -1,16 +1,133 @@
+html {
+	font-family: helvetica;
+	color: white;
+	background: black;
+	background-size: cover;
+	display: inline-block;
+	padding-bottom:10px;
+}
+
+header .main-page{
+	color: white;
+	font-size: 40pt;
+	background: #00274C;
+	padding: 37px 37px;
+}
+
+.grid_4 {
+	position: relative;
+    float: right;
+}
+
+#searchform {
+	background-image: url("/Users/laurenvanvlierbergen/Desktop/SI339/Portfolio/imgs/michigan-m copy.jpg");
+	background-repeat: no-repeat;
+	padding-top: 100px;
+	padding-bottom: 10px;
+
+}
+
+div.logos {
+	display: inline-block;
+}
+
 .main-page{
 	color: #00274C;
 	font-weight: bold;
 }
 
+ul li {
+	float: left;
+    list-style-type: none;
+    display: inline;
+} 
+
 .main-nav a{
 	text-decoration: none;
 	font-weight: bold; 
+	font-size: 1.25em;
 	color: white;
+	display: block;
+    padding: 10px;
+}
+
+.main-nav li a:hover {
+	color: black;
+	background-color: #FFCB05; /*michigan maize*/
 }
 
 .main-nav{
-	background-color: #00274C;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	background-color: #00274C; /*michigan blue*/
 }
+
+.tryout-form{
+	line-height: 2em;
+	font-size: 1.15em;
+	background-color: #ffe680;
+	color: black;
+	border: solid #00274C 2px ;
+	width: 100%;
+	font-weight: bold;
+	display: inline-block;
+	text-align: center;
+}
+
+.tryout-form input{
+	font-weight: normal;
+
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    background-color: #696969;
+}
+
+.namelink {
+	text-decoration: none;
+}
+
+td, th {
+	padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+	background-color: #FFCB05;
+	color: black;
+}
+
+.coaches a {
+	text-decoration: none;
+	padding-top: 15px;
+	color: white;
+}
+
+#check-box {
+	font-size: 11pt;
+	font-weight: normal;
+}
+
+.rugby-scroll-container{
+	width: 63%;
+
+}
+
+.banner{
+	width:100%;
+}
+
+.map{
+	width: 33%;
+}
+
+.clap{
+	width: 100%;
+}
+
+.scroll-through{
+	width: 100%;
+}
+
+

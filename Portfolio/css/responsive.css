@@ -1,0 +1,44 @@
+@media only screen and (min-width:600px){
+	
+	.main-nav ul{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.photo-grid{
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	.shield {
+		grid-column-start: 3;
+		grid-column-end: 4;
+	}
+	.mich-m{
+		grid-column-start: 4;
+		grid-column-end: 5;
+	}
+
+	.circle{
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+	.rec {
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+}
+
+@media only screen and (min-width:1000px){
+
+	.main-nav ul{
+		justify-content: flex-start;
+	}
+
+	.photo-grid{
+		display: grid;
+		grid-template-columns: 25% 25% 25% 25%;
+	}
+}
+

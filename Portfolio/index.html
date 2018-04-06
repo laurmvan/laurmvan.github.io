@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">	
     <title>University of Michigan - Rugby</title> <!-- change title depending on name-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="shortcut icon" type="image/x-icon" href="imgs/block-m.png"/>
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -14,40 +13,91 @@
 </head>
 	<body>
     <header>
+<!-- 	code for search bar. could not figure out how it could search all pages for input but was able to still create one at the top of the page. It was harder than I thought to create a functioning search bar -->
+		<div id="top_search" class="grid_4">
+			<form id="searchform" class="searchform" method="get" action="index.html"><p class="clearfix default_searchform"><input type="text" name="s" onblur="if (this.value == '') {this.value = 'Search';}" onfocus="if (this.value == 'Search') {this.value = '';}" value="Search"><button type="submit"><span>Search</span></button></p></form> 
+    	</div>
+    	<div class = michigan-banner-search>
+    	</div>                       
 		<h1 class = main-page>University of Michigan - Rugby</h1>
+		<img class = "banner" src="imgs/background-top.jpg" alt="background-rugby">
 		<nav class = "main-nav">
-<!-- 			<div class="logo">
-        	<a href="index.html"><img src="imgs/block-m.png" alt="Michigan Block M"></a>
-       		</div> -->
-			<a href="index.html">Home</a>
-			<a href="pages/roster.html">Roster</a>
-			<a href="pages/schedule.html">Schedule</a>
-			<a href="pages/contact.html">Contact Us</a>
+			<ul>
+				<li><a href="index.html">Home</a> </li>
+				<li><a href="roster.html">Roster</a></li>
+				<li><a href="schedule.html">Schedule</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
 		</nav>
 	</header>
+
+	<img class = "banner" src="imgs/banner.png" alt="banner" width="960">
+	<img class = "clap" src="imgs/clapoff.jpg" alt="team-photo">
+
+<!-- 		first page scroll through pictures -->
+	<h2 class="w3-center">Meet the Team</h2>
+	<div class="w3-content w3-display-container scroll-through">
+  		<img class="scroll-thru" src="imgs/scroll2.jpg" alt= "team-pic1" style="width:1000px">
+ 		<img class="scroll-thru" src="imgs/scroll3.jpg" alt= "team-pic2" style="width:1000px">
+  		<img class="scroll-thru" src="imgs/scroll4.jpg" alt= "team-pic3" style="width:1000px">
+  		<img class="scroll-thru" src="imgs/scroll5.jpg" alt= "team-pic4" style="width:1000px">
+<!--   		Code for the arrow allowing you to flip through the photo grid. It is formatted using the w3 stylesheet that is linked in the head section. -->
+  		<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	</div>
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+ 			showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = x.length}
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";  
+					}
+					x[slideIndex-1].style.display = "block";  
+				}
+	</script>
+
+
+<!-- photo grid using media query for different viewports -->
 	<section>
-<!-- 		This is the table of the rugby schedule -->
-		
+			<h3>Scroll through gallery using arrow</h3>
+			<div class="photo-grid">
+				<div class="photo-cell rec">
+					<img class="resp-img" src="imgs/re-sports.png" alt="rec-sports-michigan">
+				</div>
+				<div class="photo-cell circle">
+					<img class="resp-img" src="imgs/logo-circle.jpeg" alt="rugby-logo-circle">
+				</div>
+				<div class="photo-cell shield">
+					<img class="resp-img" src="imgs/logo-shield-white.jpeg" alt="rubgy-shield">
+				</div>
+				<div class="photo-cell mich-m">
+					<img class="resp-img" src="imgs/michigan-m.jpg" alt="michigan-m">
+				</div>
+			</div>
+	</section>
 
-
-	<h2>Game Locations</h2>
-	<p>Insert a map of where the games are held here.</p>
-	<h2>Interested in Trying Out?</h2>
-	<p>Please fill out the form below with your information. After clicking the submit button on the form, a recruiter will reach out to you to answer any questions you may have about getting involved on the rugby team.</p>
-	<form>
-		<label for="name">Name:</label><br>
-		<input type="text" name="name" id = "name"><br>
-		<label for="dob">DOB:</label><br>
-		<input type="date" name="DOB" id = "dob"><br>
-
-		Please enter your year of college:<br>
-		<label><input type="radio" name="year" value="fresh"> Freshman</label><br>
-  		<label><input type="radio" name="year" value="soph"> Sophomore</label><br>
-  		<label><input type="radio" name="year" value="junior"> Junior</label><br>
-  		<label><input type="radio" name="year" value="senior"> Senior</label><br>
-	</form>
+<!-- 		Footer containing links and icons to social media accounts       -->
 	<footer class="footer">
 		<p>University of Michgian Rugby &copy; 2017</p>
+		<p>Lauren Van Vlierbergen &copy; 2017</p>
+		<div id="social-media-bar">
+    	        <a href="http://twitter.com/umrfc" title="Follow @umrfc on Twitter" id="social-id-2" class="mysocial social-twitter" target="_blank"><img src="http://www.mrugby.com/wp-content/themes/graphene/images/social/twitter.png" alt="Twitter" title="Follow @umrfc on Twitter">
+            </a>
+	    	    <a href="http://www.facebook.com/pages/University-of-Michigan-Rugby-Football-Club/54612639283?ref=ts" title="Find Michigan Rugby on Facebook" id="social-id-3" class="mysocial social-facebook" target="_blank"><img src="http://www.mrugby.com/wp-content/themes/graphene/images/social/facebook.png" alt="Facebook" title="Find Michigan Rugby on Facebook">
+            </a>
+				<a href="https://www.instagram.com/uofmrugby/" title="Follow @uofmrugby on Instagram" id="social-id-4" class="mysocial social-instagram" target="_blank"><img src="http://www.mrugby.com/wp-content/themes/graphene/images/social/instagram.png" alt="Instagram" title="Follow @uofmrugby on Instagram">
+            </a>
+	    	    <a href="http://www.youtube.com/user/UMichiganRugby" title="Watch Michigan Rugby on YouTube" id="social-id-5" class="mysocial social-youtube" target="_blank"><img src="http://www.mrugby.com/wp-content/themes/graphene/images/social/youtube.png" alt="YouTube" title="Watch Michigan Rugby on YouTube">
+            </a>          
+        </div>
 	</footer>
-	</section>
 	</body>
+</html>

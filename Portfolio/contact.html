@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">	
+    <title>University of Michigan - Rugby</title> <!-- change title depending on name-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="shortcut icon" type="image/x-icon" href="imgs/block-m.png"/>
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- 	Toggles the comments box on the form using jquery -->
+    <script>
+	    $(document).ready(function(){
+	    	// Hide the comment box
+	      $('#comments-box').hide();
+	      $('#comments').change(function(){
+	        $('#comments-box').toggle();
+	      });
+	    }); 
+    </script>
+</head>
+	<body>
+    <!-- <header> -->
+	<!-- navigation bar that can be found on all pages -->
+		<h1 class = contact-page>University of Michigan - Rugby</h1>
+		<nav class = "main-nav">
+			<ul>
+				<li><a href="index.html">Home</a> </li>
+				<li><a href="roster.html">Roster</a></li>
+				<li><a href="schedule.html">Schedule</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	<section>
+		<h2>Interested in Trying Out?</h2>
+	<p>Please fill out the form below with your information. After clicking the submit button on the form, a recruiter will reach out to you to answer any questions you may have about getting involved on the rugby team.</p>
+
+	<form class = tryout-form action="submit.html">
+		<label for="name">Name:</label><br>
+		<input type="text" name="name" id = "name"><br>
+		<label for="dob">DOB:</label><br>
+		<input type="date" name="DOB" id = "dob"><br>
+
+		Please enter your year of college:<br>
+		<label><input type="radio" name="year" value="fresh"> Freshman</label><br>
+  		<label><input type="radio" name="year" value="soph"> Sophomore</label><br>
+  		<label><input type="radio" name="year" value="junior"> Junior</label><br>
+  		<label><input type="radio" name="year" value="senior"> Senior</label><br>
+  		<fieldset>
+        <legend>Email subscriptions</legend>
+        <div id="check-box">
+          <label>
+            <input type="checkbox" name="comments" id="comments">
+            Check to toggle the comments field if you would like to send us a personalized message.
+          </label>
+        </div>
+
+        <div id="comments-box">
+          <label>
+            <input type="text" name="comments">
+          </label>
+        </div>
+
+        <input type = "submit" value = "Submit">
+      </fieldset>
+	</form>
+<!-- 	used j-query to add a map of the location of ann arbor. I was having troup formatting the map but I learned how to embed it which was interesting.
+ -->
+	<section>
+		<h2>Where to find us?</h2>
+		<div id="map" class="map" style="width:320px;height:320px"></div>
+
+		<script> function Ann_Arbor_Map() {
+	    	var my_map = 
+	    	{
+		        center: new google.maps.LatLng(42.2808, -83.7430),
+		        zoom: 10,
+		        mapTypeId: google.maps.MapTypeId.HYBRID
+    		}
+			var map = new google.maps.Map(document.getElementById("map"), my_map);
+		}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=Ann_Arbor_Map"></script>
+	</section>
+	<div class="coaches">
+		<h2>Contact US</h2>
+		<a></a>Whether you are a fan or a prospective player, send us an email with your questions.<br>
+		<br>
+		<a href="mailto:jrmalin@umich.edu">Captain Justin Malin: <br> jrmalin@umich.edu</a><br><br>
+		<a href="mailto:lkleber@umich.edu">President Lyric Kleber: <br> lkleber@umich.edu</a><br><br>
+		<a href="mailto:sparksbr@umich.edu">Coach Brandon Sparks: <br> sparksbr@umich.edu</a><br><br>
+	</div>
+
+	<footer class="footer">
+		<p>University of Michgian Rugby &copy; 2017</p>
+		<p>Lauren Van Vlierbergen &copy; 2017</p>
+		<div id="social-media-bar">
+    	        <a href="http://twitter.com/umrfc" title="Follow @umrfc on Twitter" id="social-id-2" class="mysocial social-twitter" target="_blank"><img src="http://www.mrugby.com/wp-content/themes/graphene/images/social/twitter.png" alt="Twitter" title="Follow @umrfc on Twitter">
+            </a>
+	    	    <a href="http://www.facebook.com/pages/University-of-Michigan-Rugby-Football-Club/54612639283?ref=ts" title="Find Michigan Rugby on Facebook" id="social-id-3" class="mysocial social-facebook" target="_blank"><img src="http://www.mrugby.com/wp-content/themes/graphene/images/social/facebook.png" alt="Facebook" title="Find Michigan Rugby on Facebook">
+            </a>
+				<a href="https://www.instagram.com/uofmrugby/" title="Follow @uofmrugby on Instagram" id="social-id-4" class="mysocial social-instagram" target="_blank"><img src="http://www.mrugby.com/wp-content/themes/graphene/images/social/instagram.png" alt="Instagram" title="Follow @uofmrugby on Instagram">
+            </a>
+	    	    <a href="http://www.youtube.com/user/UMichiganRugby" title="Watch Michigan Rugby on YouTube" id="social-id-5" class="mysocial social-youtube" target="_blank"><img src="http://www.mrugby.com/wp-content/themes/graphene/images/social/youtube.png" alt="YouTube" title="Watch Michigan Rugby on YouTube">
+            </a>          
+        </div>
+	</footer>
+	</section>
+	</body>
+</html>
