@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Challenge 3</title>
+  <style>
+    .errormsg { 
+        color:red;
+        display:none; } 
+  </style>
+  
     <script type="text/javascript">
     function checkForm(){
       //Goes to either blueberries or strawberries pages
       var radio1 = document.getElementById("opt-straw").checked;
       var radio2 = document.getElementById("opt-blue").checked;
+      var errormsg = document.getElementById("errormsg");
       console.log("heey");
       if (radio1 || radio2) { 
         console.log("success");
@@ -15,6 +22,7 @@
       
       } else {
         console.log("fail");
+        errormsg.style.display = "block";
         return false;
       }
     }
@@ -34,6 +42,7 @@
           <label>
             <input type="radio" name="fruit" value = "b" id="opt-blue"> Blueberries
         </label>
+        <p class="errormsg" id="errormsg">Please pick a fruit!</p>
       </div>
   </fieldset>
   <input type="submit" value="Pick your fruit!">
