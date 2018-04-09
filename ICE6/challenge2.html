@@ -25,9 +25,12 @@ Add an if-else statement to your setHomeAddress() function so that when the chec
   
       var billVal = document.getElementById('billing').value;
       console.log('billVal');
-      var y = document.getElementById('home'); 
+      var y = document.getElementById('home');
       y.value = billVal;
       y.disabled = true;
+      if (billVal == "") {
+        y.disabled=false;
+      }
    }
     </script>
 </head>
