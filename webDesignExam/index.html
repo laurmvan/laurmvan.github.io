@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Final</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">      
+    </head>
+    <body>
+        <h1>Lauren Van Vlierbergen</h1>
+        <div id="container">
+            <a>
+                <img src="images/examPic.JPG" id="selfie" alt="selfie">
+            </a>
+            <a class="center">
+                <img src="images/UMSI-logo.jpg" id="logo" alt="UMSI-logo">
+            </a>
+        </div>    
+        <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("#selfie").hide();
+                $("#logo").css("margin-right", "auto");
+                $("#logo").css("margin-left", "auto");
+                $("#logo").css("display", "block");
+            });
+            $("#show").click(function(){
+                $("#selfie").show();
+                $("#logo").css("margin-right", "0");
+                $("#logo").css("margin-left", "0");
+                $("#logo").css("display", "inline-block");
+            });
+        });
+        </script>
+        <button type="button" id="hide">Hide Image</button>
+        <button type="button" id="show">Show Image</button>
+        <footer>
+        <p>Lauren Van Vlierbergen Final Exam</p>
+        </footer>
+    </body>
+</html>
